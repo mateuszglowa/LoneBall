@@ -2,6 +2,7 @@ package com.mglo.game.state;
 
 import com.mglo.game.main.GameMain;
 import com.mglo.game.main.Resources;
+import com.mglo.game.model.Paddle;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -9,9 +10,14 @@ import java.awt.event.MouseEvent;
 
 public class PlayState extends State {
 
+    private Paddle paddleLeft, paddleRight;
+    private static final int PADDLE_WIDTH = 15;
+    private static final int PADDLE_HEIGHT = 60;
+
     @Override
     public void init() {
-
+        paddleLeft = new Paddle(0, 195, PADDLE_WIDTH, PADDLE_HEIGHT);
+        paddleRight = new Paddle(785, 195, PADDLE_WIDTH, PADDLE_HEIGHT);
     }
 
     @Override
