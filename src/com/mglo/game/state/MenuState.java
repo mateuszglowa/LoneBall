@@ -26,6 +26,7 @@ public class MenuState extends State {
     @Override
     public void onClick(MouseEvent e) {
         System.out.println("OnClick");
+        setCurrentState(new PlayState());
     }
 
     @Override
