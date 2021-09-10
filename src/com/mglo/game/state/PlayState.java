@@ -22,7 +22,8 @@ public class PlayState extends State {
 
     @Override
     public void update() {
-
+        paddleLeft.update();
+        paddleRight.update();
     }
 
     @Override
@@ -50,11 +51,20 @@ public class PlayState extends State {
 
     @Override
     public void onKeyPress(KeyEvent e) {
-
+        if(e.getKeyCode() == KeyEvent.VK_UP){
+            paddleLeft.accelUp();
+            paddleRight.accelDown();
+        }else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+            paddleLeft.accelDown();
+            paddleRight.accelUp();
+        }
     }
 
     @Override
     public void onKeyRelease(KeyEvent e) {
-
+        if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_DOWN){
+            paddleLeft.stop();
+            paddleRight.stop();
+        }
     }
 }

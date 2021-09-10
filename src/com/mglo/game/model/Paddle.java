@@ -1,5 +1,7 @@
 package com.mglo.game.model;
 
+import com.mglo.game.main.GameMain;
+
 import java.awt.*;
 
 public class Paddle {
@@ -18,6 +20,12 @@ public class Paddle {
 
     public void update(){
         y += velY;
+
+        if(y < 0){
+            y = 0;
+        }else if (y + height > GameMain.GAME_HEIGHT){
+            y = GameMain.GAME_HEIGHT - height;
+        }
         updateRect();
     }
 
