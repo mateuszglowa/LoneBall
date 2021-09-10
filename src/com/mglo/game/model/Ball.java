@@ -49,7 +49,7 @@ public class Ball {
     }
 
     public boolean isDead(){
-        //TODO
+        return (x < 0 || x + width > GameMain.GAME_WIDTH);
     }
 
     public void reset(){
