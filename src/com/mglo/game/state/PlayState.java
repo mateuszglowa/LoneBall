@@ -35,6 +35,12 @@ public class PlayState extends State {
 
         //Draw Separator
         g.drawImage(Resources.line, (GameMain.GAME_WIDTH / 2) -2, 0,null);
+
+        //Draw Paddles
+        g.setColor(Color.WHITE);
+        g.fillRect(paddleLeft.getX(), paddleLeft.getY(), paddleLeft.getWidth(), paddleLeft.getHeight());
+        g.fillRect(paddleRight.getX(), paddleRight.getY(), paddleRight.getWidth(), paddleRight.getHeight());
+
     }
 
     @Override
