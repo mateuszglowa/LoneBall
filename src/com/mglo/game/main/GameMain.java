@@ -3,7 +3,7 @@ package com.mglo.game.main;
 import javax.swing.*;
 
 public class GameMain {
-    private static final String GAME_TITLE = "Java Game Development Framework (Chapter 4)";
+    private static final String GAME_TITLE = "LoneBall Game";
     public static final int GAME_WIDTH = 800;
     public static final int GAME_HEIGHT = 450;
     public static Game sGame;
