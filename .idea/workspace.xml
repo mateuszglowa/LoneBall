@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d631a039-d43c-4d7f-9379-be89858e05d9" name="Default" comment="adding GameMain as Main init class and removing Main.java (dummy class)">
-      <change beforePath="$PROJECT_DIR$/src/com/mglo/game/state/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mglo/game/state/PlayState.java" afterDir="false" />
-    </list>
+    <list default="true" id="d631a039-d43c-4d7f-9379-be89858e05d9" name="Default" comment="adding GameMain as Main init class and removing Main.java (dummy class)" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,8 +82,8 @@
       <file leaf-file-name="PlayState.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mglo/game/state/PlayState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="47" column="23" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2777#2778#0" expanded="true" />
@@ -822,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mglo/game/state/PlayState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="23" />
+        <state relative-caret-position="221">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2777#2778#0" expanded="true" />
