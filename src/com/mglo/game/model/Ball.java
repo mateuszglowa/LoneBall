@@ -45,7 +45,14 @@ public class Ball {
     }
 
     public void onCollideWith(Paddle p){
-            //TODO
+            if( x < GameMain.GAME_WIDTH / 2){
+                x = p.getX() + p.getWidth();
+            } else{
+                x = p.getX() - width;
+            }
+
+            velX = -velX;
+            velY += RandomNumberGenerator.getRandIntBetween(-2, 3);
     }
 
     public boolean isDead(){
@@ -53,6 +60,30 @@ public class Ball {
     }
 
     public void reset(){
-        //TODO
+        x = 300;
+        y= 200;
+        velX = 5;
+        velY = RandomNumberGenerator.getRandIntBetween(-4, 5);
+    }
+
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public Rectangle getRect() {
+        return rect;
     }
 }
