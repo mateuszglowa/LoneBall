@@ -34,6 +34,21 @@ public class PlayState extends State {
         paddleLeft.update();
         paddleRight.update();
         ball.update();
+
+        if(ballCollides(paddleLeft)){
+            playerScore++;
+            ball.onCollideWith(paddleLeft);
+            Resources.hit.play();
+        } else if(ballCollides(paddleRight)) {
+            playerScore++;
+            ball.onCollideWith(paddleRight);
+            Resources.hit.play();
+
+        }else if(ball.isDead()){
+            playerScore -= 3;
+            ball.reset();
+        }
+
     }
 
     @Override
@@ -58,8 +73,6 @@ public class PlayState extends State {
         //Draw UI
         g.setFont(scoreFont);
         g.drawString(""+ playerScore, 350, 40);
-
-
     }
 
     @Override
@@ -84,5 +97,9 @@ public class PlayState extends State {
             paddleLeft.stop();
             paddleRight.stop();
         }
+    }
+
+    private boolean ballCollides(Paddle p){
+        return ball.getRect().intersects(p.getRect());
     }
 }
