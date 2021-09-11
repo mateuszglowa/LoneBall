@@ -2,6 +2,7 @@ package com.mglo.game.state;
 
 import com.mglo.game.main.GameMain;
 import com.mglo.game.main.Resources;
+import com.mglo.game.model.Ball;
 import com.mglo.game.model.Paddle;
 
 import java.awt.*;
@@ -14,6 +15,9 @@ public class PlayState extends State {
     private static final int PADDLE_WIDTH = 15;
     private static final int PADDLE_HEIGHT = 60;
 
+    private Ball ball;
+    private static final int BALL_DIAMETER = 20;
+
     private int playerScore = 0;
     private Font scoreFont;
 
@@ -22,12 +26,14 @@ public class PlayState extends State {
         paddleLeft = new Paddle(0, 195, PADDLE_WIDTH, PADDLE_HEIGHT);
         paddleRight = new Paddle(785, 195, PADDLE_WIDTH, PADDLE_HEIGHT);
         scoreFont = new Font("SansSerif", Font.BOLD, 25);
+        ball = new Ball(300,200,BALL_DIAMETER, BALL_DIAMETER);
     }
 
     @Override
     public void update() {
         paddleLeft.update();
         paddleRight.update();
+        ball.update();
     }
 
     @Override
@@ -46,9 +52,14 @@ public class PlayState extends State {
         g.fillRect(paddleLeft.getX(), paddleLeft.getY(), paddleLeft.getWidth(), paddleLeft.getHeight());
         g.fillRect(paddleRight.getX(), paddleRight.getY(), paddleRight.getWidth(), paddleRight.getHeight());
 
+        //Draw Ball
+        g.drawRect(ball.getX(), ball.getY(),ball.getWidth(), ball.getHeight());
+
         //Draw UI
         g.setFont(scoreFont);
         g.drawString(""+ playerScore, 350, 40);
+
+
     }
 
     @Override
